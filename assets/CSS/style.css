@@ -1,21 +1,25 @@
 :root{
     /* colors */
-    --black: #141204;
-    --olivegreen: #262a10;
-    --greenBrown: #54442b;
-    --sand: #a9714b;
-    --orange: #e8985e;
+    --lavenderblush: #EDE3E4;
+    --magnolia: #E7DFE8;
+    --rosequartz: #AF9FA5;
+    --taupegrey: #92898A;
 }
 
 body{
     font-family: 'Montserrat', sans-serif;
+    background-color: var(--lavenderblush)
 }
 
 /* navbar */
-nav .navbar{
-    background-color: var(--orange);
-    color: var(--olivegreen);
+.nav-background{
+    background-color: var(--taupegrey);
 }
+
+.navbar-brand, .nav-link{
+    color: var(--magnolia);
+}
+
 
 
 /* hero section */
@@ -26,38 +30,91 @@ header.jumbotron{
     padding-bottom: 100px;
     color: var(--greenBrown);
     background-image: url(../images/jumbotronImage.JPG);
-    background-size: cover;
+    background-size:cover;
     background-repeat: no-repeat;
+    background-position: center;
     height: 500px;
-    height: calc(100vh - 25px);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-h2{
-    background-color: var(--orange);
-    color: var(--olivegreen);
+.title {
+    background-color: var(--taupegrey);
+    color: var(--lavenderblush);
+}
+
+h1{
+    font-size: 50px;
+    color: var(--rosequartz);
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255,255,255, 0.4);
+
 }
 
 /* Work */
 
-/* About Me */
-.icon a{
-    color: var(--black);
+#work {
+    width:100%
 }
 
-.icon a:hover{
-    color: var(--orange);
-    background-color: var(--olivegreen);
-    box-shadow: 0 0 10px var(--orange);
+.card-img-small{
+    height: 500px;
+    border-radius: 10px;
+}
+
+.card {
+    box-shadow: 0 0 10px var(--taupegrey);
+    border-radius: 10px;
+}
+
+.btn:hover{
+    box-shadow: 0 0 10px var(--taupegrey);
     border-radius: 5px;
 }
 
-/* Key Skills */
+/* About Me */
+.icon a:hover{
+    color: var(--rosequartz);
+    text-shadow: 0 0 10px var(--taupegrey);
+    border-radius: 5px;
+}
+
+a span{
+    text-decoration: none;
+}
+
+.icon a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.icon a span {
+    margin-top: 5px;
+}
+
 
 /* Footer */
 footer{
-    background-color: var(--orange);
-    color: var(--olivegreen);
+    background-color: var(--taupegrey);
+    color: var(--lavenderblush);
+}
+
+@media screen and (max-width:425px){
+    .card-img-small {
+        height: 180px;
+    }
+    
+    h1{
+        font-weight: bold;
+        color: #383e42;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .card-img-small{
+        height: 300px;
+    }
 }
